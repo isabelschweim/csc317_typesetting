@@ -44,3 +44,124 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+/** FONTS **/
+/*Edu AU VIC WA NT Guides*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Merriweather*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Roboto Slab*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+  font-size: 0.625rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.05rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+
+p {
+  margin: 0 0 1.6rem 0; /* Bottom margin for spacing between paragraphs */
+  line-height: 1.8; /* Increase line-height for better readability */
+}
+
+/* Text indentation for first paragraph in each section */
+section h2 + p {
+  text-indent: 1.25rem; /* Indent the first paragraph after a heading */
+}
+
+
+/** LINKS **/
+a:link {
+  color: rgb(197, 77, 12);
+  text-decoration: underline;
+  outline: none; /* Remove default focus outline */
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  background-color: beige;
+  outline: none; /* Remove the default focus outline for ALL links */
+}
+
+a:active {
+  background: rgb(246, 236, 142);
+  color: rgb(213, 25, 0);
+  font-weight: bold;
+}
+
+/* Adding an external link icon next to external links */
+a[href^="https://"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background-size: 100%;
+  background-image: url("external-link-52.png");
+}
+
+
+
+nav {
+  display: flex;
+  gap: 0.625%;
+}
+
+nav + a {
+  flex: 1;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+nav + a:link +
+a:visited +
+a:focus {
+  background: palegoldenrod;
+  color: black;
+}
+
+nav + a:hover {
+  background: orange;
+}
+
+nav + a:active {
+  background: darkred;
+  color: white;
+}
