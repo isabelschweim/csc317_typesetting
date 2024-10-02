@@ -44,7 +44,7 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
-/** FONTS **/
+/** FONTS + TEXT STYLING **/
 /*Edu AU VIC WA NT Guides*/
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
 /*Roboto*/
@@ -56,19 +56,7 @@ header, footer {
 
 html {
   font-size: 0.625rem;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
   font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  letter-spacing: 0.05rem;
-  word-spacing: 0.05rem;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -86,16 +74,26 @@ h2 {
   font-weight: 500;
   font-style: normal;
   font-size: 2.5rem;
+  letter-spacing: 0.1rem;
 }
 
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6; /*sets line height for paragraphs and list items*/
+  letter-spacing: 0.05rem;
+  word-spacing: 0.05rem;
+  margin: 0;
+  padding: 0;
+}
 
-p {
-  margin: 0 0 1.6rem 0; /* Bottom margin for spacing between paragraphs */
-  line-height: 1.8; /* Increase line-height for better readability */
+footer {
+  font-family: "Roboto", sans-serif;
 }
 
 /* Text indentation for first paragraph in each section */
-section h2 + p {
+h2 + p {
   text-indent: 1.25rem; /* Indent the first paragraph after a heading */
 }
 
@@ -135,33 +133,65 @@ a[href^="https://"]::after {
 }
 
 
+/** LISTS **/
+ul ol {
+  margin: 1.6em 0; /* Match paragraph spacing */
+  padding-left: 1.6em; /* Indent list items */
+}
 
-nav {
+ul li {
+  /*line-height: 1.6;  Match paragraph line height */
+  list-style-type: square; /* Use custom bullet here if desired */
+}
+
+
+/** NAVIGATION MENU **/
+
+nav ul li {
   display: flex;
+  height: 50px; /* Adjust height as needed */
+  width: 200px;
   gap: 0.625%;
-}
 
-nav + a {
-  flex: 1;
-  text-decoration: none;
-  outline-color: transparent;
-  text-align: center;
+  list-style-type: none;
+  font-size: 2.5rem;
   line-height: 3;
-  color: black;
+  color: brown;
+
+  border: 1px solid #a66;
+  border-width: 0.3rem;
+  border-radius: 15%;
+  background-color: burlywood;
+  outline: 1px solid brown;
+  
+  padding: 25px 35px; /* Top/bottom padding */
+  margin: 15px 0; /* Space between buttons */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth hover transition */
 }
 
-nav + a:link +
-a:visited +
-a:focus {
-  background: palegoldenrod;
-  color: black;
+nav li:hover {
+  background-color: beige; /* Darker color on hover */
 }
 
-nav + a:hover {
-  background: orange;
+nav ul li a:link,
+nav ul li a:visited {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: rgb(114, 69, 69);
+  text-decoration: none;
 }
 
-nav + a:active {
-  background: darkred;
-  color: white;
+nav ul li a:hover, 
+nav ul li a:focus {
+  background-color: unset;
+  outline: none; /* Remove the default focus outline for ALL links */
 }
+
+nav ul li a:active {
+  color: rgb(213, 25, 0);
+  font-weight: 400;
+}
+
