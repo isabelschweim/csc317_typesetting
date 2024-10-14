@@ -94,6 +94,14 @@ h2 + p {
   text-indent: 1.25rem; /* Indent the first paragraph after a heading */
 }
 
+header, footer {
+  background-color: burlywood;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
 
 /** LINKS **/
 a:link {
@@ -179,7 +187,7 @@ nav ul li {
 }
 
 nav li:hover {
-  background-color: beige; /* Darker color on hover */
+  background-color: antiquewhite; /* Darker color on hover */
 }
 
 nav ul li a:link,
